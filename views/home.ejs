@@ -32,7 +32,8 @@
                         <td><strong>Status:</strong></td><td><%=d.status%></td>
                 <%if(d.status==="Present"){%>
                   <tr id="lastrow">  
-                <td><a href="/home/<%=d.id%>""><button id="exit">Exit the building</button></a></td>
+                <td><form action="/home/<%=d.id%>?_method=PUT" method="POST">
+                    <button type="submit" id="exit">Exit the building</button></form></td>
                 <%}else{%>
                 <tr>
                     <td><strong>Check Out Time:</strong></td><td><%if(d.couth<=9){%><%=0%><%}%><%=d.couth%>:<%if(d.coutm<=9){%><%=0%><%}%><%=d.coutm%></td>
