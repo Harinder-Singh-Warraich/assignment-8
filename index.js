@@ -63,7 +63,7 @@ app.delete('/home/:id',async (req,res)=>{
 
 function sendemail(email,cinh,cinm){
     const sgMail=require('@sendgrid/mail');
-   const  sendgrid='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';
+   const  sendgrid='';
   sgMail.setApiKey(sendgrid);
   const msg={
       to: email,
@@ -78,7 +78,7 @@ function sendemail(email,cinh,cinm){
 
 function sendexmail(email,couth,coutm){
     const sgMail=require('@sendgrid/mail');
-   const  sendgrid='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';
+   const  sendgrid='';
   sgMail.setApiKey(sendgrid);
   const msg={
       to: email,
